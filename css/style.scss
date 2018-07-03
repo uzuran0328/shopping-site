@@ -31,7 +31,6 @@ html {
 $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
 
 
-
 // header start
 header{
   background: $beige;
@@ -169,6 +168,7 @@ header{
 // main
 #main{
 
+
 // ぱんくずリスト
 .breadcrumb{
 //        display:flex;
@@ -299,29 +299,47 @@ header{
 
 
 // guide_area
-#guide_area{        //#から始まるのはid
+#guide_area {//#から始まるのはid
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-//    justify-content: space-around;
-    margin: 20px 0;
+    flex-wrap: colums;
+    justify-content: space-around;
+//    margin: 20px 0;
+    font-size: 12px;
+    line-height:100%;
+    
+    .card_img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      }
 
     .guide_area_images {
-      width: 46%;
+    width: 46.5%;
     padding: 10px;
+//    margin: 1px;
     background-color: #FFF;
-  }
+    
+
     h2{
     font-size: 16px;
     font-weight: bold;
+//    line-height:110%;
+    margin-bottom: 1rem;
     color: $sand;
   }
     h3{
     font-size: 12px;
     font-weight: bold;
     color: $sand;
+    margin-bottom: 1rem;
+//    line-height:110%;
   }
     p{
     font-size: 12px;
+//    line-height:0%;
+    margin-bottom: 12px;
+    }
     }
 }
 // guide_area
@@ -409,10 +427,18 @@ header{
 //    justify-content: space-around;
     margin: 20px 0;
 
+      .card_img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      }
+
     .guide_area_images {
       width: 100%;
     padding: 10px;
     background-color: #FFF;
+    
+    
   }
     h2{
     font-size: 16px;
@@ -460,8 +486,14 @@ header{
     background-repeat:no-repeat; 
     background-position : 95% 50%;
     border-radius: 0px;
+    color:#222;
+    
+    ::-webkit-input-placeholder {
     color:#b9b9b9;
     font-style: italic; 
+      
+    }
+    
   }
   }
   
@@ -584,10 +616,60 @@ header{
 
 //sp view  
 @media (max-width: 550px) {
+  
+#side_menu{
       .page_top_link{
         text-align:center; 
   }
+  .about_contents{
+    display: flex;
+    flex-wrap: colums;
+    
+    .about_img{
+      padding: 5px;
+    .about_contents_img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    }
+    
+    .about_contents_2{
+      padding: 5px;
+            width:80%;
+//    display: flex;
+//　　flex-direction: column;
+      .about_contents_more{
+        text-align: left;
+      }
+    }
+  }
+  
+   .shop_info_contents{
+    display: flex;
+    flex-wrap: colums;
+    
+    .shop_img{
+      padding: 5px;
+    .shop_info_img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    }
+    
+    .shop_info_contents_2{
+      padding: 5px;
+      width:80%;
+
+      .shop_info_more{
+        text-align: left;
+      }
+    }
+  } 
+  
 } 
+}
 
 //pc view
 @media (min-width: 551px) {
@@ -769,10 +851,17 @@ header{
             .product_quantity_2{
               display:flex;
               justify-content:flex-start;
-              border:solid 1px #e3e8cf;
+              border:none;
               background-color:#fff;
+              padding-top:10px;
+
+              
+              input[type="text"] {  
+              border:solid 1px #e3e8cf;
               width:150px;
               height:35px;
+              }
+
               
             }
             
@@ -848,9 +937,7 @@ header{
     .product_head{
       display: block;
       }
-    
-  
-    
+      
       .product_img{
       flex-flow: column; 
       width:100%;

@@ -135,23 +135,33 @@ header {
       #main #pop_items .pop_items_images p {
         font-size: 12px; }
   #main #guide_area {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0; }
+    flex-wrap: colums;
+    justify-content: space-around;
+    font-size: 12px;
+    line-height: 100%; }
+    #main #guide_area .card_img {
+      width: 100%;
+      max-width: 100%;
+      height: auto; }
     #main #guide_area .guide_area_images {
-      width: 46%;
+      width: 46.5%;
       padding: 10px;
       background-color: #FFF; }
-    #main #guide_area h2 {
-      font-size: 16px;
-      font-weight: bold;
-      color: #887f69; }
-    #main #guide_area h3 {
-      font-size: 12px;
-      font-weight: bold;
-      color: #887f69; }
-    #main #guide_area p {
-      font-size: 12px; } }
+      #main #guide_area .guide_area_images h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #887f69; }
+      #main #guide_area .guide_area_images h3 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #887f69;
+        margin-bottom: 1rem; }
+      #main #guide_area .guide_area_images p {
+        font-size: 12px;
+        margin-bottom: 12px; } }
 @media (max-width: 550px) {
   #main .pc_view {
     display: none; }
@@ -193,6 +203,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0; }
+    #main #guide_area .card_img {
+      width: 100%;
+      max-width: 100%;
+      height: auto; }
     #main #guide_area .guide_area_images {
       width: 100%;
       padding: 10px;
@@ -225,8 +239,10 @@ header {
       background-repeat: no-repeat;
       background-position: 95% 50%;
       border-radius: 0px;
-      color: #b9b9b9;
-      font-style: italic; }
+      color: #222; }
+      #side_menu .search .search_area ::-webkit-input-placeholder {
+        color: #b9b9b9;
+        font-style: italic; }
   #side_menu .page_link {
     width: 100%;
     background-color: #887f69;
@@ -292,8 +308,36 @@ header {
       text-align: center; }
 
 @media (max-width: 550px) {
-  .page_top_link {
-    text-align: center; } }
+  #side_menu .page_top_link {
+    text-align: center; }
+  #side_menu .about_contents {
+    display: flex;
+    flex-wrap: colums; }
+    #side_menu .about_contents .about_img {
+      padding: 5px; }
+      #side_menu .about_contents .about_img .about_contents_img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; }
+    #side_menu .about_contents .about_contents_2 {
+      padding: 5px;
+      width: 80%; }
+      #side_menu .about_contents .about_contents_2 .about_contents_more {
+        text-align: left; }
+  #side_menu .shop_info_contents {
+    display: flex;
+    flex-wrap: colums; }
+    #side_menu .shop_info_contents .shop_img {
+      padding: 5px; }
+      #side_menu .shop_info_contents .shop_img .shop_info_img {
+        width: 100%;
+        max-width: 100%;
+        height: auto; }
+    #side_menu .shop_info_contents .shop_info_contents_2 {
+      padding: 5px;
+      width: 80%; }
+      #side_menu .shop_info_contents .shop_info_contents_2 .shop_info_more {
+        text-align: left; } }
 @media (min-width: 551px) {
   .page_top_link {
     text-align: right; } }
@@ -407,10 +451,13 @@ hr {
           #product .product_main .product_about .product_about_2 .product_about_2_1 .product_quantity .product_quantity_2 {
             display: flex;
             justify-content: flex-start;
-            border: solid 1px #e3e8cf;
+            border: none;
             background-color: #fff;
-            width: 150px;
-            height: 35px; }
+            padding-top: 10px; }
+            #product .product_main .product_about .product_about_2 .product_about_2_1 .product_quantity .product_quantity_2 input[type="text"] {
+              border: solid 1px #e3e8cf;
+              width: 150px;
+              height: 35px; }
     #product .product_main .product_about .product_about_3 {
       border-top: solid 1px #e3e8cf; }
       #product .product_main .product_about .product_about_3 h2 {
